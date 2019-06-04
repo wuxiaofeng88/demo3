@@ -3,7 +3,13 @@ package com.km.controller;/**
  */
 
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 /**
  * @ClassName TestThymeleafController
@@ -22,5 +28,16 @@ public class TestThymeleafController {
     @RequestMapping({"/","/index.html"})
     public String index(){
         return "index";
+    }
+
+    @PostMapping(value = "/user/login")
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password, Map<String, Object> msg, HttpSession session){
+        if(!StringUtils.isEmpty(username) && "123456".equalsIgnoreCase(password)){
+            session.setAttribute("loginUser",username);
+            return "redirect:/main.html";
+        }else {
+            msg.put("msg","用户名或者密码错误！");
+            return "index";
+        }
     }
 }

@@ -20,6 +20,6 @@ public class TestStringUtils {
         list.add("zhangsan");
         list.add("lisi");
         list.add("wangwu");
-        System.out.println(listgit);
+        System.out.println(list);
     }
 }

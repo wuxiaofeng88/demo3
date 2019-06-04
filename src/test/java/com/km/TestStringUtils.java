@@ -21,6 +21,7 @@ public class TestStringUtils {
         list.add("lisi");
         list.add("wangwu");
         list.add("zhaoliu");
+        list.add("sunqi");
         System.out.println(list);
     }
 }

@@ -23,6 +23,7 @@ public class TestStringUtils {
         list.add("zhaoliu");
         list.add("sunqi");
         list.add("liba");
+        list.add("qianjiu");
         System.out.println(list);
     }
 }

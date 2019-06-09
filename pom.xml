@@ -47,7 +47,7 @@
 
 	</dependencies>
 
-	<distributionManagement>
+	<!--<distributionManagement>
 		<repository>
 			<id>nexus-release</id>
 			<name>Nexus Release Repository</name>
@@ -59,7 +59,7 @@
 			<url>http://192.168.231.132:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
-
+-->
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -100,11 +100,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
+				<!--<configuration>
 					<mainClass>com.km.Demo3Application</mainClass>
-				</configuration>
+				</configuration>-->
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>com.km</groupId>
 				<artifactId>mine-plugin</artifactId>
 				<version>1.0-SNAPSHOT</version>
@@ -125,11 +125,11 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 
-	<repositories>
+	<!--<repositories>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -159,5 +159,5 @@
 			<url>https://repo.spring.io/milestone</url>
 		</pluginRepository>
 	</pluginRepositories>
-
+-->
 </project>

@@ -24,6 +24,7 @@ public class TestStringUtils {
         list.add("sunqi");
         list.add("liba");
         list.add("qianjiu");
+        list.add("wangshi");
         System.out.println(list);
     }
 }

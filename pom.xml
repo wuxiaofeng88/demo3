@@ -59,6 +59,7 @@
 			<url>http://192.168.231.132:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -158,4 +159,5 @@
 			<url>https://repo.spring.io/milestone</url>
 		</pluginRepository>
 	</pluginRepositories>
+
 </project>

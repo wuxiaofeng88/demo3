@@ -47,7 +47,7 @@
 
 	</dependencies>
 
-	<!--<distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>nexus-release</id>
 			<name>Nexus Release Repository</name>
@@ -59,7 +59,6 @@
 			<url>http://192.168.231.132:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
--->
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -129,7 +128,7 @@
 		</plugins>
 	</build>
 
-	<!--<repositories>
+	<repositories>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -159,5 +158,4 @@
 			<url>https://repo.spring.io/milestone</url>
 		</pluginRepository>
 	</pluginRepositories>
--->
 </project>

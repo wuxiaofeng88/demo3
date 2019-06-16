@@ -13,7 +13,7 @@
 		<link href="asserts/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="asserts/css/dashboard.css" rel="stylesheet">
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
 		<style type="text/css">
 			/* Chart.js */
 			
@@ -67,16 +67,16 @@
 							</thead>
 							<tbody>
 								<tr th:each="emp:${emps}">
-									<th th:text="${emp.id}"></th>
-									<th>[[${emp.lastName}]]</th>
-									<th th:text="${emp.email}"></th>
-									<th>[[${emp.gender}==0?'女':'男']]</th>
-									<th>[[${emp.department.departmentName}]]</th>
-									<th>[[${#dates.format(emp.birth,'yyyy-MM-dd HH:mm:ss')}]]</th>
-									<th>
-										<button class="btn btn-sm btn-primary">修改</button>
-										<button class="btn btn-sm btn-danger">删除</button>
-									</th>
+									<td th:text="${emp.id}"></td>
+									<td>[[${emp.lastName}]]</td>
+									<td th:text="${emp.email}"></td>
+									<td>[[${emp.gender}==0?'女':'男']]</td>
+									<td>[[${emp.department.departmentName}]]</td>
+									<td>[[${#dates.format(emp.birth,'yyyy-MM-dd HH:mm:ss')}]]</td>
+									<td>
+										<a class="btn btn-sm btn-primary" th:href="@{/emp_add?id=}+${emp.id}">修改</a>
+										<button class="btn btn-sm btn-danger deleteBtn">删除</button>
+									</td>
 								</tr>
 							</tbody>
 						</table>

@@ -65,6 +65,12 @@ public class CustomerController {
         return "redirect:/emps";
     }
 
+    @DeleteMapping(value = "/emp")
+    public String deleteEmployee(Integer id){
+        employeeDao.delete(id);
+        return "redirect:/emps";
+    }
+
     @InitBinder
     public void initBinder(WebDataBinder binder, WebRequest request) {
         //转换日期 注意这里的转化要和传进来的字符串的格式一直 如2015-9-9 就应该为yyyy-MM-dd

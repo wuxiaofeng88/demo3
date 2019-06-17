@@ -21,7 +21,10 @@ public class MyErrorAttributes extends DefaultErrorAttributes{
     public Map<String, Object> getErrorAttributes(WebRequest webRequest, boolean includeStackTrace) {
         Map<String, Object> errorAttributes = super.getErrorAttributes(webRequest, includeStackTrace);
         errorAttributes.put("company","km");
-        errorAttributes.putAll((Map<String, Object>)webRequest.getAttribute("ext",0));
+        Object ext = webRequest.getAttribute("ext",0);
+        if(ext != null){
+            errorAttributes.putAll((Map<String, Object>)ext);
+        }
         return errorAttributes;
     }
 }

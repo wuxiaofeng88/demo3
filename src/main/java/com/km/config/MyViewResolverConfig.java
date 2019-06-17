@@ -5,6 +5,7 @@ package com.km.config;
 
 import com.km.component.MyLocaleResolver;
 import com.km.component.MyLoginInterceptor;
+import org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -30,7 +31,7 @@ public class MyViewResolverConfig extends WebMvcConfigurerAdapter{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index","/index.html","/user/login","/static/**");
+        registry.addInterceptor(new MyLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index","/index.html","/user/login","/static/**","/myServlet","/myFilter");
     }
 
     @Override

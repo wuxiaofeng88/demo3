@@ -1,4 +1,4 @@
-package com.km.controller.component;/**
+package com.km.component;/**
  * Created by asus-pc on 2019/5/25.
  */
 

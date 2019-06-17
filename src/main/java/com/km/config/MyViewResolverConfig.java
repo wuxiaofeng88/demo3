@@ -1,9 +1,10 @@
-package com.km.controller.config;/**
+package com.km.config;
+/**
  * Created by asus-pc on 2019/5/19.
  */
 
-import com.km.controller.component.MyLocaleResolver;
-import com.km.controller.component.MyLoginInterceptor;
+import com.km.component.MyLocaleResolver;
+import com.km.component.MyLoginInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;

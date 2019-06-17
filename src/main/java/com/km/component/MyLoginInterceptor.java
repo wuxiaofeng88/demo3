@@ -1,8 +1,7 @@
-package com.km.controller.component;/**
+package com.km.component;/**
  * Created by asus-pc on 2019/5/25.
  */
 
-import org.omg.PortableInterceptor.Interceptor;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -10,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.handler.Handler;
 
 /**
  * @ClassName MyLoginInterceptor

@@ -39,4 +39,9 @@ public class MyExceptionHandler {
         request.setAttribute("ext",map);
         return "forward:/error";
     }
+
+    @ExceptionHandler(Exception.class)
+    public void handleAllException(Exception exception){
+        System.out.println("MyExceptionHandler类的handleAllException方法打印错误信息：:" + exception);
+    }
 }

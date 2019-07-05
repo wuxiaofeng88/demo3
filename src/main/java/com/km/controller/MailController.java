@@ -22,7 +22,7 @@ import java.io.File;
  **/
 @RestController
 public class MailController {
-    @Autowired
+   /* @Autowired
     JavaMailSenderImpl mailSender;
 
     @GetMapping("/sendMail")
@@ -52,5 +52,5 @@ public class MailController {
         mailSender.send(mimeMessage);
         System.out.println("邮件发送完成！");
         return "success";
-    }
+    }*/
 }

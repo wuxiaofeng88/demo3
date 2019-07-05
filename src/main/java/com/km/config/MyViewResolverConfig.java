@@ -31,7 +31,7 @@ public class MyViewResolverConfig extends WebMvcConfigurerAdapter{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index","/index.html","/user/login","/static/**","/myServlet","/myFilter","/testEpt","/testAsynService","/sendMail","/sendMultiPartMail");
+        registry.addInterceptor(new MyLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/index","/index.html","/user/login","/static/**","/myServlet","/myFilter","/testEpt","/testAsynService","/sendMail","/sendMultiPartMail","/hotDeploy");
     }
 
     @Override

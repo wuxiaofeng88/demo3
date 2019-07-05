@@ -33,4 +33,10 @@ public class TestController {
         String email = employee.getEmail();
         return "testEpt is executed!email:" + email;
     }
+
+    @RequestMapping(value = "/hotDeploy")
+    @ResponseBody
+    public String hotDeploy(){
+        return "正在测试热部署功能，测试成功！";
+    }
 }

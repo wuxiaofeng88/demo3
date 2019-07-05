@@ -7,10 +7,11 @@
     <bean id="target" class="com.km.advice.NaiveWaiter"/>
 
     <bean id="greetingBeforeAdvice" class="com.km.advice.GreetingBeforeAdvice"/>
+    <bean id="greetingAfterAdvice" class="com.km.advice.GreetingAfterAdvice"/>
 
     <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
           p:proxyInterfaces="com.km.advice.Waiter"
-          p:interceptorNames="greetingBeforeAdvice"
+          p:interceptorNames="greetingBeforeAdvice,greetingAfterAdvice"
           p:target-ref="target"/>
 
 </beans>
